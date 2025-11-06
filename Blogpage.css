@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,500&display=swap');
+
+:root {
+    --main-color: #274546;
+    --primary-color: #efeee5;
+    --darker-main: #1c3031;
+    --lighter-main: #dfecec;
+    --lighter-bg-main: #ffff;
+    --color-foreground: #FFFFFF;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-hover: rgba(0, 0, 0, 0.15);
+    --color-text-primary: #1A1A1A;
+    --color-text-secondary: #5C5C5C;
+
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+nav {
+    width: 100%;
+    background: var(--primary-color);
+    height: 80px;
+    top: 0;
+    position: relative;
+}
+
+.nav-content {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.logo p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: .5s;
+}
+
+nav .checkbox {
+    display: none;
+
+}
+
+nav input {
+    display: none;
+}
+
+nav .checkbox i {
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+
+}
+
+ul li a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    border: 2ps solid transparent;
+    color: var(--main-color);
+
+}
+
+ul li a:hover {
+    color: var(--main-color);
+}
+
+
+
+.btn {
+    width: 120px;
+    background: #274546;
+    color: var(--primary-color);
+    border-radius: 18px;
+    height: 40px;
+    border: none;
+
+}
+
+@media (width < 750px) {
+    nav .checkbox {
+        display: block;
+    }
+
+    ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 85px);
+        left: -100%;
+        top: 85px;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    nav #check:checked~ul {
+        left: 0;
+    }
+
+    ul li a {
+        font-size: 1.25rem;
+    }
+}
+
+/* --- Global & Variables --- */
+:root {
+    /* Example green for 'Get Started' */
+    --text-color: #4a5568;
+    --heading-color: #2d3748;
+    --light-gray: #f7fafc;
+    --border-color: #e2e8f0;
+    --max-width: 1000px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* --- Navigation Bar --- */
+
+
+/* --- Article Header --- */
+.article-page {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.article-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.article-header h1 {
+    font-size: 40px;
+    color: var(--heading-color);
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.tags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tag {
+    background-color: var(--darker-main);
+    color: var(--border-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* --- Featured Image --- */
+.featured-image-container {
+    max-width: 900px;
+    /* Slightly wider than the text container */
+    margin: 0 auto 40px;
+}
+
+.featured-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Article Body (The main layout: Sidebar + Content) --- */
+.article-body-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    /* Space between sidebar and content */
+}
+
+.article-sidebar {
+    flex: 0 0 150px;
+    /* Fixed width for the sidebar */
+    padding-top: 10px;
+    /* Align with the start of the first paragraph */
+}
+
+.article-content {
+    flex: 1;
+    /* Content takes the remaining space */
+    max-width: 650px;
+    /* Keep the text column readable width */
+}
+
+.article-content p {
+    margin-bottom: 25px;
+    font-size: 17px;
+}
+
+/* Contributor Box Styling */
+.contributor-box {
+    /* Style to match the image: subtle border/box is not explicit, 
+       but we'll group the text logically. */
+    padding-right: 20px;
+}
+
+.contributor-meta {
+    margin-bottom: 20px;
+}
+
+.meta-label {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.meta-value {
+    font-size: 15px;
+    color: var(--heading-color);
+    font-weight: 600;
+    margin: 0;
+}
+
+
+/* ---------------------------------------------------- */
+/* --- RESPONSIVE DESIGN (Media Queries) --- */
+/* ---------------------------------------------------- */
+
+/* Tablet View (Max-width 900px) */
+@media (max-width: 900px) {
+    .article-header h1 {
+        font-size: 32px;
+    }
+
+    .article-sidebar {
+        flex: 0 0 120px;
+        /* Shrink sidebar slightly */
+    }
+}
+
+/* Mobile View (Max-width 768px) */
+@media (max-width: 768px) {
+
+    /* Navigation Adjustments */
+    .nav-container {
+        flex-wrap: wrap;
+        /* Allow wrapping */
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .logo {
+        flex-basis: 100%;
+        /* Logo takes full width on top */
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .main-nav {
+        display: none;
+        /* Hide main links to save space (often done with a hamburger menu) */
+    }
+
+    /* Article Header Adjustments */
+    .article-header h1 {
+        font-size: 28px;
+    }
+
+    /* Article Body - Stack Sidebar and Content */
+    .article-body-section {
+        flex-direction: column;
+        /* Stack the sidebar above the content */
+        gap: 20px;
+    }
+
+    .article-sidebar {
+        order: -1;
+        /* Move sidebar/meta info above the main text */
+        display: flex;
+        justify-content: space-between;
+        flex: unset;
+        /* Remove fixed width */
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 20px;
+    }
+
+    .contributor-meta {
+        margin-bottom: 0;
+    }
+
+    .article-content {
+        max-width: 100%;
+        /* Allow content to use full width */
+    }
+}
+
+/* Small Mobile View (Max-width 480px) */
+@media (max-width: 480px) {
+    .article-page {
+        padding: 20px 15px;
+    }
+
+    .article-header h1 {
+        font-size: 24px;
+    }
+
+    .article-sidebar {
+        /* Stack the contributor boxes too */
+        flex-direction: column;
+    }
+
+    .contributor-meta {
+        margin-bottom: 10px;
+    }
+}
+
+/* === Footer Section === */
+.site-footer {
+    background-color: var(--primary-color);
+    color: var(--main-color);
+    padding: 60px 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Container to center content */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* Enables responsive wrapping */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* Each footer column */
+.footer-col {
+    flex: 1 1 200px;
+    /* Flexible width with min size */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 220px;
+}
+
+/* Footer logo or heading */
+.footer-col h3 {
+    font-size: 1.1rem;
+    color: var(--main-color);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Footer nav container (row) */
+.footer-col-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+/* Link group inside each nav */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links a {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+/* === Footer Bottom === */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.social-links i {
+    height: 2.5rem;
+    width: 2.5rem;
+    line-height: 2.5rem;
+    border-radius: 50%;
+    font-size: 1.7rem;
+    background: var(--primary-color);
+    border: .1rem solid var(--main-color);
+    color: var(--darker-main);
+    text-align: center;
+
+}
+
+.social-links i:hover {
+    background: var(--darker-main);
+    border: .1rem solid var(--main-color);
+    color: var(--primary-color);
+
+}
+
+/* === Responsive Design === */
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-col-nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
