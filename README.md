@@ -4,10 +4,10 @@
 
 👉 View Live Site
 
-(Replace the link with your GitHub Pages or hosted URL)
+https://tax-insight.vercel.app/
 
 
-#📰 About the Project
+# 📰 About the Project
 
 The Tax Blog Website is a modern and informative platform designed to help readers understand tax concepts, stay updated on tax regulations, and learn financial management tips in a simple, accessible way.
 
