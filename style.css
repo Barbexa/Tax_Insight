@@ -36,11 +36,11 @@ nav {
 }
 
 .nav-content {
-    height: 100px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px;
+    padding: 0 30px;
 }
 
 .logo {
@@ -134,13 +134,13 @@ ul li a:hover {
 }
 
 .right-side {
-    padding: 60px;
+    padding: 20px;
     width: 50%;
 
 }
 
 .right-content {
-    padding: 20px;
+    padding: 10px;
 }
 
 .right-content h2 {
@@ -211,7 +211,7 @@ ul li a:hover {
 
 img {
     height: auto;
-    max-width: 100%;
+    width: 100%;
     display: block;
     border-top-left-radius: 50px;
 }
@@ -334,9 +334,9 @@ img {
 }
 
 .row {
-    margin-top: 5%;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .about-col {
@@ -368,7 +368,7 @@ img {
     width: 100%;
     display: flex;
     background: var(--primary-color);
-    padding: 40px;
+    padding: 20px;
     margin: auto;
 }
 
@@ -411,9 +411,10 @@ img {
 }
 
 .img-about img {
+    width: 100%;
+    height: auto;
     border-radius: 40px;
-    height: 550px;
-    width: 500px;
+    object-fit: cover;
 }
 
 .img-about h2 {
