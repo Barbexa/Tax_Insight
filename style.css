@@ -367,15 +367,15 @@ ul li a {
 .about2 {
     display: flex;
     background: var(--primary-color);
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 20px;
+
+
 }
 
 .about-text-area,
 .about-image-area {
     width: 50%;
-    padding: 20px;
+    padding: 60px;
 }
 
 .about-text-area h2 {
@@ -447,7 +447,8 @@ ul li a {
 .services-page {
     padding-top: 60px;
     display: flex;
-    max-width: 1200px;
+    padding: 60px;
+
     margin: 0 auto;
 }
 
